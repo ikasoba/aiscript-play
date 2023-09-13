@@ -20,14 +20,14 @@ export function RemotePlay({ id, host }: { id: string; host: string }) {
       installLibrary(interpreter, await createPlayStdLib(token, instance));
       console.log(interpreter.exec(Parser.parse("USER_NAME")));
 
-      const res = await fetch(new URL("/api/flash/show", host), {
+      const res = await fetch("/api/flash", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          i: token,
-          flashId: id,
+          id: id,
+          instance: host,
         }),
       });
 
