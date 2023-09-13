@@ -1,9 +1,16 @@
-import { PageProps } from "$fresh/server.ts";
+import { Handlers, PageProps } from "$fresh/server.ts";
 import { useComputed, useSignal } from "@preact/signals";
 import { Play } from "../../islands/Play.tsx";
 import { RemotePlay } from "../../islands/RemotePlay.tsx";
 import { Head } from "$fresh/runtime.ts";
 
+export const handler: Handlers = {
+  async GET(_req, ctx) {
+    const resp = await ctx.render();
+    resp.headers.set("Content-Security-Policy", "frame-src *");
+    return resp;
+  },
+};
 const host = Deno.env.get("host") ?? "http://localhost:8000";
 
 export default function PlayPage(props: PageProps) {
