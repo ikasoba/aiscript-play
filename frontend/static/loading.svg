@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="67.733mm" height="67.733mm" version="1.1" viewBox="0 0 67.733 67.733" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    g {
+      width: 100%;
+      height: 100%;
+      transform-origin: center;
+    }
+  </style>
+  <g style="animation: 1.5s linear infinite spin;"><path d="m56.506 33.867a22.639 22.639 0 0 1-22.639 22.639" style="fill:none;stroke-width:13.836;stroke:#9c0;"/></g>
+  <g style="animation: 1s linear infinite spin;"><path d="m50.708 43.59a19.446 19.446 0 0 1-26.564 7.1178" style="fill:none;opacity:.25;stroke-width:7.2726;stroke:#000;"/></g>
+</svg>

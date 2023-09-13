@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  frontend:
+    build: .
+    environment:
+      - host=http://localhost:8000/
+    ports:
+      - "8000:8000"

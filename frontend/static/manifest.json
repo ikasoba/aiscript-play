@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "name": "MiPlay Hub",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#9c0",
+  "icons": [
+    {
+      "src": "app-icon.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "app-icon.svg",
+      "sizes": "128x128",
+      "type": "image/svg+xml"
+    }
+  ]
+}

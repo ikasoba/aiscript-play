@@ -1,0 +1,42 @@
+{
+  "lock": false,
+  "tasks": {
+    "start": "deno run -A --watch=static/,routes/ dev.ts",
+    "update": "deno run -A -r https://fresh.deno.dev/update .",
+    "build": "deno run -A dev.ts build",
+    "preview": "deno run -A main.ts"
+  },
+  "lint": {
+    "rules": {
+      "tags": ["fresh", "recommended"]
+    },
+    "exclude": ["_fresh"]
+  },
+  "imports": {
+    "$fresh/": "https://deno.land/x/fresh@1.3.1/",
+    "preact": "https://esm.sh/preact@10.15.1",
+    "preact/": "https://esm.sh/preact@10.15.1/",
+    "preact-render-to-string": "https://esm.sh/*preact-render-to-string@6.2.1",
+    "@preact/signals": "https://esm.sh/*@preact/signals@1.1.3",
+    "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.2.3",
+    "twind": "https://esm.sh/twind@0.16.19",
+    "twind/": "https://esm.sh/twind@0.16.19/",
+    "$std/": "https://deno.land/std@0.193.0/",
+    "mfm-js/": "https://esm.sh/mfm-js@0.23.3/",
+    "@twind/aspect-ratio/": "https://esm.sh/@twind/aspect-ratio@0.1.4/",
+    "@syuilo/aiscript": "https://esm.sh/@syuilo/aiscript@0.15.0/?target=es2022",
+    "nanoid/": "https://deno.land/x/nanoid@v3.0.0/",
+    "monaco-editor": "https://esm.sh/monaco-editor@0.41.0/?target=es2022",
+    "localforage": "https://esm.sh/localforage@1.10.0",
+    "monaco-themes/": "https://esm.sh/monaco-themes@0.4.4/",
+    "@monaco-editor/loader": "https://esm.sh/@monaco-editor/loader@1.3.3",
+    "@syuilo/aiscript/": "https://esm.sh/gh/syuilo/aiscript/"
+  },
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact"
+  },
+  "fmt": {
+    "exclude": ["_fresh"]
+  }
+}
