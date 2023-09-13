@@ -30,7 +30,10 @@ export default function PlayPage(props: PageProps) {
         />
         <meta
           name="twitter:player"
-          content={new URL(`/p/${props.params.id_with_host}`, service_host)
+          content={new URL(
+            `/p/${encodeURIComponent(props.params.id_with_host)}`,
+            service_host,
+          )
             .toString()}
         />
         <meta name="twitter:player:width" content="640" />
