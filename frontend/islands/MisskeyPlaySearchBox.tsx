@@ -11,19 +11,6 @@ interface Flash {
 }
 
 export function MisskeyPlaySearchBox() {
-  useEffect(() => {
-    (async () => {
-      const instance = await Storage.instance();
-      const token = await Storage.token();
-
-      console.log(instance, token);
-
-      if (instance == null || token == null) {
-        location.href = "/login";
-      }
-    })();
-  });
-
   const [flash, setFlash] = useState<Flash>();
   const [flashUrl, setFlashUrl] = useState<URL>();
 
