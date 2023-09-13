@@ -4,14 +4,7 @@ import { Play } from "../../islands/Play.tsx";
 import { RemotePlay } from "../../islands/RemotePlay.tsx";
 import { Head } from "$fresh/runtime.ts";
 
-export const handler: Handlers = {
-  async GET(_req, ctx) {
-    const resp = await ctx.render();
-    resp.headers.set("Content-Security-Policy", "frame-src *");
-    return resp;
-  },
-};
-const host = Deno.env.get("host") ?? "http://localhost:8000";
+const service_host = Deno.env.get("host") ?? "http://localhost:8000";
 
 export default function PlayPage(props: PageProps) {
   const id_with_host = props.params.id_with_host.split("@", 2);
@@ -24,6 +17,10 @@ export default function PlayPage(props: PageProps) {
         <title>
           MiPlay Hub
         </title>
+        <meta
+          http-equiv="Content-Security-Policy"
+          content="frame-src https://*"
+        />
         <meta name="twitter:card" content="player" />
         <meta name="twitter:site" content="@ikasoba000" />
         <meta name="twitter:title" content="MiPlay Hub" />
@@ -33,7 +30,8 @@ export default function PlayPage(props: PageProps) {
         />
         <meta
           name="twitter:player"
-          content={new URL(`/p/${props.params.id_with_host}`, host).toString()}
+          content={new URL(`/p/${props.params.id_with_host}`, service_host)
+            .toString()}
         />
         <meta name="twitter:player:width" content="640" />
         <meta name="twitter:player:height" content="480" />
