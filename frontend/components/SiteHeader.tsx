@@ -9,9 +9,7 @@ export function SiteHeader() {
       const instance = await Storage.instance();
       const token = await Storage.token();
 
-      console.log(instance, token);
-
-      if (instance == null || token == null) {
+      if (!instance || !token) {
         setIsLoginned(false);
       }
     })();
