@@ -7,3 +7,5 @@ services:
       - host=http://localhost:8000/
     ports:
       - "8000:8000"
+    args:
+      - GIT_REVISION=$(git rev-parse HEAD)

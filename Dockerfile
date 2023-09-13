@@ -1,5 +1,8 @@
 FROM denoland/deno:1.36.4
 
+ARG GIT_REVISION
+ENV DENO_DEPLOYMENT_ID=${GIT_REVISION}
+
 WORKDIR /miplay-hub/
 COPY frontend .
 
