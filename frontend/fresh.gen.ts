@@ -24,9 +24,10 @@ import * as $$10 from "./islands/Play.tsx";
 import * as $$11 from "./islands/PlayDebugger.tsx";
 import * as $$12 from "./islands/PostFormButton.tsx";
 import * as $$13 from "./islands/RemotePlay.tsx";
-import * as $$14 from "./islands/Switch.tsx";
-import * as $$15 from "./islands/TextInput.tsx";
-import * as $$16 from "./islands/Textarea.tsx";
+import * as $$14 from "./islands/SiteHeader.tsx";
+import * as $$15 from "./islands/Switch.tsx";
+import * as $$16 from "./islands/TextInput.tsx";
+import * as $$17 from "./islands/Textarea.tsx";
 
 const manifest = {
   routes: {
@@ -54,9 +55,10 @@ const manifest = {
     "./islands/PlayDebugger.tsx": $$11,
     "./islands/PostFormButton.tsx": $$12,
     "./islands/RemotePlay.tsx": $$13,
-    "./islands/Switch.tsx": $$14,
-    "./islands/TextInput.tsx": $$15,
-    "./islands/Textarea.tsx": $$16,
+    "./islands/SiteHeader.tsx": $$14,
+    "./islands/Switch.tsx": $$15,
+    "./islands/TextInput.tsx": $$16,
+    "./islands/Textarea.tsx": $$17,
   },
   baseUrl: import.meta.url,
 };

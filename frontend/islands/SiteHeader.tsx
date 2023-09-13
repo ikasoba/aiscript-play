@@ -3,17 +3,18 @@ import { useEffect, useState } from "preact/hooks";
 import { Storage } from "../storage/index.ts";
 
 export function SiteHeader() {
-  const [isLoginned, setIsLoginned] = useState(true);
+  const [isLoginned, setIsLoginned] = useState(false);
+
   useEffect(() => {
     (async () => {
       const instance = await Storage.instance();
       const token = await Storage.token();
 
-      if (!instance || !token) {
-        setIsLoginned(false);
+      if (instance && token) {
+        setIsLoginned(true);
       }
     })();
-  });
+  }, []);
 
   return (
     <header

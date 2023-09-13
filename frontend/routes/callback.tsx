@@ -1,6 +1,6 @@
 import { asset, Head } from "$fresh/runtime.ts";
 import { useEffect } from "preact/hooks";
-import { SiteHeader } from "../components/SiteHeader.tsx";
+import { SiteHeader } from "../islands/SiteHeader.tsx";
 import { Storage } from "../storage/index.ts";
 import { MiAuthCallback } from "../islands/MiAuthCallback.tsx";
 import { tw } from "twind";

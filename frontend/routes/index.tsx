@@ -9,7 +9,7 @@ import { Play } from "../islands/Play.tsx";
 import { Mfm } from "../islands/Mfm.tsx";
 import { Folder } from "../islands/Folder.tsx";
 import { PlayDebugger } from "../islands/PlayDebugger.tsx";
-import { SiteHeader } from "../components/SiteHeader.tsx";
+import { SiteHeader } from "../islands/SiteHeader.tsx";
 import { Storage } from "../storage/index.ts";
 import { MisskeyPlaySearchBox } from "../islands/MisskeyPlaySearchBox.tsx";
 
